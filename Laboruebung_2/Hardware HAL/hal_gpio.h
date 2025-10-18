@@ -21,7 +21,13 @@
 //  #### PORT 8 #####
 #define LCD_BL  BIT0
 
-
 void hal_GpioInit();
+
+typedef struct {
+    unsigned char active; // TRUE = 1 / FALSE = 0
+    unsigned char button; // Button number
+} ButtonCom;
+
+ButtonCom CCbutton;
 
 #endif /* HARDWARE_HAL_HAL_GPIO_H_ */

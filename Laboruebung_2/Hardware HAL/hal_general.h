@@ -15,9 +15,7 @@ void HAL_PMM_Init();
 void LCD_BL_ON();
 void LCD_BL_OFF();
 
-void wait_in_us(int time_in_us);
-
-void calc_int(float a, float b);
+void enableInterrupts_StartStop();
 
 #endif /* HARDWARE_HAL_HAL_GENERAL_H_ */
 

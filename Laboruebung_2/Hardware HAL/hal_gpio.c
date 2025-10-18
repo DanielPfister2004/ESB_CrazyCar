@@ -24,6 +24,8 @@ void hal_GpioInit()
     P8DIR |= LCD_BL;
     P8REN |= LCD_BL;
 
+
+    __enable_interrupt(); // enable GIE
 }
 
 

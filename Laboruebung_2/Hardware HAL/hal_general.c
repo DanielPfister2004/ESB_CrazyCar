@@ -31,17 +31,21 @@ void LCD_BL_ON()
     P8OUT |= LCD_BL;
 }
 
-void wait_in_us(int time_in_us) // Clockspeed 20MHz
-{
-    int clock = 20000000;
-    int i;
 
-    for(i = 0; i < clock * time_in_us; i++);
+// enable Interrupt for START_BUTTON PORT1 BIT6
+void enableInterrupts_StartStop()
+{
+    P1DIR &= ~(START_BUTTON + STOP_BUTTON);
+    P1REN |= (START_BUTTON+ STOP_BUTTON);
+    P1OUT |= (START_BUTTON+ STOP_BUTTON);
+    P1IE |= (START_BUTTON+ STOP_BUTTON);
+    P1IES &= ~(START_BUTTON + STOP_BUTTON);      //rising edge
+    //P1IES |= (START_BUTTON + STOP_BUTTON);       //falling edge
+    P1IFG &= ~(START_BUTTON + STOP_BUTTON);      // erasing Interrupt-flag - if not deleted, ...
+                                 // ...there will be an interrupt right after the car is booted up
+
+    //__enable_interrupt(); // GIE ... global interrupt enable
 }
 
-void calc_int(float a, float b)
-{
-    float sum = a + b;
-}
 
 
