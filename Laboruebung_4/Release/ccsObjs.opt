@@ -1,0 +1,9 @@
+"./main.obj"
+"./Hardware HAL/hal_general.obj"
+"./Hardware HAL/hal_gpio.obj"
+"./Hardware HAL/hal_pmm.obj"
+"./Hardware HAL/hal_ucs.obj"
+"./Hardware HAL/hal_wdt.obj"
+"../lnk_msp430f5335.cmd"
+-llibmath.a
+-llibc.a

@@ -18,8 +18,6 @@ volatile int cnt_stop_button = 0, cnt_start_button = 0;
 extern ButtonCom CCbutton;
 
 
-
-
 void main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
@@ -32,7 +30,6 @@ void main(void)
     {
         int cnt_start = cnt_start_button;
         int cnt_stop = cnt_stop_button;
-
 
         // when display is on, it calc
         // it needs around 220us - 240us for one float calc
