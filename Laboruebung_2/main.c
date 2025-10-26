@@ -88,7 +88,6 @@ __interrupt void Port_1(void)
         for(i = 0; i<25000; i++); // debouncing
         // deleting Interrupt-Flag
         P1IFG &= ~START_BUTTON;
-
     }
     else if(P1IFG & STOP_BUTTON)   // see if STOP_BUTTON was triggered
     {

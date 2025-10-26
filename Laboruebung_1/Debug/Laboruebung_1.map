@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v21.6.1                     
 ******************************************************************************
->> Linked Thu Oct  2 18:19:42 2025
+>> Linked Tue Oct 21 12:57:34 2025
 
 OUTPUT FILE NAME:   <Laboruebung_1.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 00008000
