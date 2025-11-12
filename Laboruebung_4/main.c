@@ -4,25 +4,22 @@
 
 #include <stdint.h>  // for uint32_t or other variables
 
-
 void main(void)
 {
-    WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
     hal_init();
     dl_Init();
 
-    while (1)
+    while(1)
     {
-        dl_SetSteering(0);
+//        dl_SetSteering(100);
+//        __delay_cycles(10000);
+//        dl_SetSteering(0);
+//        __delay_cycles(10000);
+//        dl_SetSteering(-100);
+//        __delay_cycles(10000);
+        dl_SetThrottle(100);
     }
 }
 
-
-
-//#pragma vector=TIMER1_A1_VECTOR
-//__interrupt void TimerA1_ISR(void)
-//{
-//    TA1CCTL2 &= ~CCIFG;
-//}
 
 

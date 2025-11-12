@@ -21,6 +21,7 @@
 //  #### PORT 8 #####
 #define LCD_BL  BIT0
 
+
 void hal_GpioInit();
 
 typedef struct {

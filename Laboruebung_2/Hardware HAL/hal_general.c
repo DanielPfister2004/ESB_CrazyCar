@@ -40,11 +40,12 @@ void enableInterrupts_StartStop()
     P1OUT |= (START_BUTTON+ STOP_BUTTON);
     P1IE |= (START_BUTTON+ STOP_BUTTON);
     P1IES &= ~(START_BUTTON + STOP_BUTTON);      //rising edge
-    //P1IES |= (START_BUTTON + STOP_BUTTON);       //falling edge
+    //P1IES |= (START_BUTTON + STOP_BUTTON);     //falling edge
     P1IFG &= ~(START_BUTTON + STOP_BUTTON);      // erasing Interrupt-flag - if not deleted, ...
                                  // ...there will be an interrupt right after the car is booted up
 
     //__enable_interrupt(); // GIE ... global interrupt enable
+    // is in hal_gpio.c enabled
 }
 
 

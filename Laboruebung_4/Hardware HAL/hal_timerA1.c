@@ -15,7 +15,7 @@ void hal_timerA1_Init()
 
     TA1CCTL0 = 0;            // set to zero initialy
     TA1CCTL0 &= ~CAP;        // comapre mode
-   //TA1CCTL0 |= CCIE;        // interrupt enable
+    TA1CCTL0 |= CCIE;        // interrupt enable
 
     TA1CCTL1 = 0;            // set to zero initialy
     TA1CCTL1 &= ~CAP;        // comapre mode
@@ -31,4 +31,7 @@ void hal_timerA1_Init()
 
     __enable_interrupt(); // global
 }
+
+
+
 

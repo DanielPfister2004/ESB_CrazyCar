@@ -3,6 +3,8 @@
 #include "hal_wdt.h"
 #include "hal_gpio.h"
 #include "hal_ucs.h"
+#include "hal_LCD.h"
+#include "hal_timerB0.h"
 
 
 void hal_init()
@@ -10,19 +12,7 @@ void hal_init()
     HAL_PMM_Init();
     hal_GpioInit();
     hal_ucsInit();
-}
-
-
-void LCD_BL_OFF()
-{
-    // LOW off
-    P8OUT &= ~LCD_BL;
-}
-
-void LCD_BL_ON()
-{
-    // HIGH on
-    P8OUT |= LCD_BL;
+    timerB0_init();
 }
 
 

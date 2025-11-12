@@ -3,14 +3,17 @@
 #include "hal_wdt.h"
 #include "hal_gpio.h"
 #include "hal_ucs.h"
+#include "hal_timerA1.h"
 
 
 void hal_init()
 {
+    hal_WdtInit();
     HAL_PMM_Init();
     hal_GpioInit();
     hal_ucsInit();
     hal_timerA1_Init();
+    driver_ESCinit();
 }
 
 

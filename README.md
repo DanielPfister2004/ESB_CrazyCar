@@ -61,6 +61,7 @@ Measuring the time the display is on, the time the MSP430 needs to perfom the ca
 <br><br>
 <!-- ################################################################################################### -->
 
+
 # How to install Git
 
 To create a git, you first need to download the git:

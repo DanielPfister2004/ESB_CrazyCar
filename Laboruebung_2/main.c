@@ -18,14 +18,10 @@ volatile int cnt_stop_button = 0, cnt_start_button = 0;
 extern ButtonCom CCbutton;
 
 
-
-
 void main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
     enableInterrupts_StartStop();
-
-
     hal_init();
 
     while (1)
